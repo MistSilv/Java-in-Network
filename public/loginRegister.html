@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 id="form-title">Login</h1>
+
+        <!-- Login Form -->
+        <div id="login-form">
+            <form>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <button onclick="switchToRegister()">Register</button></p>
+        </div>
+
+        <!-- Register Form (hidden by default) -->
+        <div id="register-form" style="display: none;">
+            <form>
+                <label for="username">Username:</label><br>
+                <input type="text" id="new-username" name="username"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="new-password" name="password"><br><br>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <button onclick="switchToLogin()">Login</button></p>
+        </div>
+    </div>
+
+    <script>
+        function switchToRegister() {
+            // Switch to the Register form
+            document.getElementById('form-title').innerText = 'Register';
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        }
+
+        function switchToLogin() {
+            // Switch to the Login form
+            document.getElementById('form-title').innerText = 'Login';
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('register-form').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
