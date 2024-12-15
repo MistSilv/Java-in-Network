@@ -1,0 +1,45 @@
+Serwer .node
+
+
+
+
+Przykładowa struktura bazy danych ( * - opcjonalne )
+Uzykownik    
+{
+    Id
+    email/login
+    hasło
+    nr_tel*
+    flaga_administracji*(placeholder - zapwene można w kodzie .js zapisać)
+    
+    }
+Dane_uzytkownika*{
+    ID
+    imie
+    Nazwisko
+    Państwo*
+    Województwo
+    Miejscowość
+    kod_pocztowy
+    Ullica (
+    nr_domu
+}
+
+Rezerwacja{
+    Id
+    ID_uzyt
+    ID_bilet
+    Data_rezerwacji
+    Kwota
+
+}
+
+Bilety{
+    ID
+    Typ (bilet na koncert,bilet na mecz itp.)
+    Cena
+    Data
+}
+
+
+

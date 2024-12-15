@@ -1,7 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-const App = () => <h1>Hello, React! Welcome to my app!</h1>;
+import App from "./App";
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+function NavigationBar() {
+  // TODO: Actually implement a navigation bar
+  return <h1>Hello from React!</h1>;
+}
+
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+root.render(<NavigationBar />);

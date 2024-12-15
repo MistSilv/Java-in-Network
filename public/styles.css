@@ -1,0 +1,90 @@
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f4f4f9;
+      color: #333;
+      min-height: 100vh;
+    }
+
+    .header {
+      width: 100%;
+      background: #007bff;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .header button {
+      background: #0056b3;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .header button:hover {
+      background: #003d80;
+    }
+
+    .main {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .trending {
+      margin-top: 20px;
+    }
+
+    .trending ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .trending li {
+      margin: 10px 0;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .footer {
+      width: 100%;
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer .links {
+      margin-bottom: 10px;
+    }
+
+    .footer .links a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer .links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .map {
+      margin-top: 10px;
+    }
+
+    .datetime {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #666;
+    }

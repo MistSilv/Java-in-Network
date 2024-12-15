@@ -3,13 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>React App</title>
+  <title>Welcome to Ticket Booking App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="/src/index.js"></script>
+  <script src="/src/main.js"></script>
 </head>
 <body>
-    <div id="root">
-        <div>Help Plis </div>
-        <button type="button" onclick="window.location.href='loginRegister.html'">Click Me!</button>
+  <div class="header">
+    <button type="button" onclick="window.location.href='loginRegister.html'">Login/Register</button>
+    <button type="button" onclick="window.location.href='Lista.html'">View Ticket List</button>
+    <button type="button" onclick="window.location.href='PanelUzytkownika.html'">User Dashboard</button>
+    <button type="button" onclick="window.location.href='TechSupportSite.html'">Tech Support</button>
+  </div>
+
+  <div class="main">
+    <h1>Welcome to Ticket Booking App</h1>
+    <nav id="navigation"></nav>
+    <p>Your one-stop solution for booking tickets conveniently and efficiently!</p>
+
+    <div class="trending">
+      <h2>Trending Tickets</h2>
+      <ul>
+        <li>Concert: The Rock Stars Live</li>
+        <li>Sports: Local Football Finals</li>
+        <li>Theater: Shakespeare Classics</li>
+        <li>Festival: Food and Wine Extravaganza</li>
+        <li>Movie: Latest Blockbuster Premiere</li>
+      </ul>
     </div>
-  <script src="bundle.js"></script> <!-- Webpack will inject the bundle here -->
+
+    <div class="datetime" id="datetime">Loading date and time...</div>
+  </div>
+
+  <div class="footer">
+    <div class="links">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+    <p>© 2023 Ticket Booking App. All rights reserved.</p>
+    <div class="map">
+      <p>Our Location: 123 Ticket Lane, Event City</p>
+    </div>
+  </div>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+      document.getElementById('datetime').textContent = now.toLocaleDateString('en-GB', options);
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
 </body>
 </html>

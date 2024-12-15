@@ -12,18 +12,19 @@
     "contributors": [],
     "main": "main.js",
     "scripts": {
-        "start": "webpack serve --open",
-        "build": "webpack",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
     },
     "license": "ISC",
     "description": "",
     "dependencies": {
         "@webassemblyjs/ast": "^1.14.1",
-        "@webassemblyjs/helper-numbers": "^1.14.1",
-        "@webassemblyjs/ieee754": "^1.14.1",
+        "loader-utils": "3.2.1",
         "react": "^19.0.0",
-        "react-dom": "^19.0.0"
+        "react-dom": "^19.0.0",
+        "typescript": "5.7.2"
     },
     "devDependencies": {
         "@babel/core": "^7.26.0",
